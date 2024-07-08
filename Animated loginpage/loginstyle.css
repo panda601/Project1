@@ -1,0 +1,345 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    background-image:url("bg.jpg"),url("trees.png") ;
+    background-repeat:no-repeat,no-repeat ;
+    background-size: cover;
+    background-blend-mode: multiply;
+   
+} 
+/* Section Styling */
+section {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    width: 400px;
+    /* height: 500px; */
+    text-align: center;
+
+}
+
+section .set {
+    
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    
+    
+}
+
+section .set div{
+    position: absolute;
+    display: block;
+
+}    
+section .set div:nth-child(1)
+{
+    left:20%;
+    animation: animate 15s linear infinite;
+    animation-delay:-7s;
+}
+section .set div:nth-child(2)
+{
+    left:25%;
+    animation: animate 15s linear infinite;
+    animation-delay:-5s;
+}
+section .set div:nth-child(3)
+{
+    left:70%;
+    animation: animate 15s linear infinite;
+    animation-delay:0s;
+}
+section .set div:nth-child(4)
+{
+    left:30%;
+    animation: animate 15s linear infinite;
+    animation-delay:-5s;
+}
+section .set div:nth-child(5)
+{
+    left:85%;
+    animation: animate 18s linear infinite;
+    animation-delay:-10s;
+}
+section .set div:nth-child(6)
+{
+    left:10%;
+    animation: animate 12s linear infinite;
+    /* animation-delay: 0s; */
+}
+section .set div:nth-child(7)
+{
+    left:15%;
+    animation: animate 14s linear infinite;
+    /* animation-delay:-7s; */
+}
+section .set div:nth-child(8)
+{
+    left:60%;
+    animation: animate 15s linear infinite;
+    /* animation-delay:-7s; */
+}
+      @keyframes animate
+      {
+        0%{
+            opacity: 0;
+            top: -10%;
+            transform: translateX(20px) rotate(0deg);
+        }
+        10%{
+            opacity: 1;
+        }
+        20%{
+            transform: translateX(-20px) rotate(30deg);
+        }
+        40%{
+            transform: translateX(-20px) rotate(60deg);
+        }
+        60%{
+            transform: translateX(-20px)rotate(90deg) ;
+        }
+        80%{
+            transform: translateX(-20px) rotate(180deg);
+        }
+        100%
+        {
+            top: 110%;
+            transform: translateX(-20px) rotate(360deg);
+        }
+      }
+      
+
+      /* girl riding  */
+ /* .girl {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 28%;
+    left: 45%;
+    pointer-events: none;
+    
+ } */
+ .girl {
+    position: absolute;
+    bottom: 80px;
+    animation: moveGirl 5s infinite linear;
+    z-index: -1;
+  }
+  
+  
+  @keyframes moveGirl {
+    0% {
+      right: 0;
+      transform: scaleX(1);
+    }
+    50% {
+      right: calc(100% - 150px);
+      transform: scaleX(1);
+    }
+    51% {
+      transform: scaleX(-1);
+    }
+    100% {
+      right: 0;
+      transform: scaleX(-1);
+    }
+  }
+ form {
+    text-align: center;
+  }
+ 
+
+
+
+
+/* Form Styling */
+form h1 {
+    margin-bottom: 20px;
+    color: #bc2323;
+    font-size: 40px;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 5px;
+    color: #c12b2b;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.inputbox input:focus ~ ion-icon,
+.inputbox input:valid ~ ion-icon {
+    color: #333;
+}
+
+/*  and Forget Password */
+.inputbox:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputbox:last-of-type label {
+    position: static;
+    transform: none;
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.inputbox:last-of-type a {
+    font-size: 14px; /* Corrected font size */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.inputbox:last-of-type a:hover {
+    text-decoration: underline;
+}
+
+
+
+button {
+    padding: 17px 100px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+  }
+  
+  button:active {
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+  }
+  
+
+.inputbox1
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 20px;
+    
+
+    
+    /* text-decoration: none; */
+   
+}
+/* sign up */
+
+.inputbox1 a
+{
+    margin-top: 20px;
+    margin-left:5%;
+    color: #bc2323;
+    text-decoration: none;
+   
+}
+
+.inputbox1 a:hover {
+    text-decoration: underline;
+}
+
+/*  Responsive styles*/
+@media (max-width: 768px) {
+    section {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .inputbox input {
+      padding: 10px 10px 10px 35px;
+    }
+  
+    .inputbox label {
+      left: 35px;
+    }
+  
+    .girl img {
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    form h1 {
+      font-size: 20px;
+    }
+  
+    form button {
+      font-size: 14px;
+    }
+  
+    .inputbox1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .inputbox1 a {
+      margin-bottom: 10px;
+    }
+  
+    .girl img {
+      width: 80px;
+    }
+  }
